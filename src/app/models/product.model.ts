@@ -6,6 +6,7 @@ export class Product {
     public price: number,
     public likes: number,
     public isLiked: boolean,
-    public sizes?: Array<string>
+    public createdDate: Date,
+    public sizes?: Array<string>,
   ) {}
 }

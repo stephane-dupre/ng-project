@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
         12,
         0,
         false,
+        new Date('2020-01-20'),
         ['M', 'L']
       ),
       new Product(
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
         12,
         0,
         false,
+        new Date('2022-01-20'),
         ['M', 'L']
       ),
     ];
