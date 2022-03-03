@@ -1,0 +1,19 @@
+<div class="root">
+  <h2>{{ product.title }}</h2>
+  <img [src]="product.imageUrl" [alt]="product.title" />
+  <p>{{ product.description }}</p>
+  <p>{{ product.price }} $</p>
+  <p>
+    <span>{{ product.likes }}</span>
+    <button (click)="onAddLikes()">
+      {{ product.isLiked ? "Dislike" : "Like" }}
+    </button>
+  </p>
+  <select
+    *ngIf="product.sizes && product.sizes.length > 1"
+    [value]="selected"
+    (change)="onSelectedSize()"
+  >
+    <option *ngFor="let size of product.sizes" value="size">{{ size }}</option>
+  </select>
+</div>
