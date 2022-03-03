@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../models/product.model';
+import { ProductsServices } from '../services/products.service';
 
 @Component({
   selector: 'app-product-card',
@@ -11,10 +12,14 @@ export class ProductCardComponent {
   selected: string;
   multiplier: number;
 
-  constructor() {}
+  constructor(private productsService: ProductsServices) {}
 
   ngOnInit(): void {
     this.onSelectedSize();
+  }
+
+  onLikes() {
+    this.productsService.onAddLikes(this.product)
   }
 
   onSelectedSize() {

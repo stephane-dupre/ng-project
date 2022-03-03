@@ -15,6 +15,6 @@ export class AppComponent implements OnInit {
   constructor(private productsServices: ProductsServices) {}
   
   ngOnInit(): void {
-    this.products = this.productsServices.products;
+    this.products = this.productsServices.getAllProducts();
   }
 }
