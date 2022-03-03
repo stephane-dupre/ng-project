@@ -22,13 +22,4 @@ export class ProductCardComponent {
     this.product.price = this.product.price * this.multiplier;
     console.log(this.selected);
   }
-
-  onAddLikes() {
-    if (!this.product.isLiked) {
-      this.product.likes++;
-    } else {
-      this.product.likes--;
-    }
-    this.product.isLiked = !this.product.isLiked;
-  }
 }
